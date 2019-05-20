@@ -2,6 +2,7 @@ const express = require('express');
 const ejs = require('ejs');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const api = require('./api/api');
 const app = express();
 
 const db = mongoose.connection;
@@ -14,6 +15,8 @@ app.set('views', __dirname + '/static/views');
 app.engine('html', ejs.renderFile);
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+app.use('/api', api);
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/static/views/main.html');
