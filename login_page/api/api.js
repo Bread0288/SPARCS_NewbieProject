@@ -9,7 +9,8 @@ router.post('/sign_in', (req, res) => {
     user.pw = req.body.pw;
     user.save((err, result) => {
         if (err) return res.status(500).end('DB error');
-        return res.sendStatus(200);
+        //return res.sendStatus(200);
+        return res.redirect('/');
     })
 })
 
