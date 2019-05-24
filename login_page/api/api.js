@@ -5,6 +5,7 @@ const router = express.Router();
 
 router.post('/sign_in', (req, res) => {
     const user = new User();
+    console.log('id : ' + req.body.id + ' pw : ' + req.body.pw);
     user.id = req.body.id;
     user.pw = req.body.pw;
     user.save((err, result) => {
