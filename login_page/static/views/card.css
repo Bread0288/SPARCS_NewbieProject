@@ -1,0 +1,47 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: Arial;
+}
+
+.cards{
+    width: 30%;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 40px;
+    box-shadow: 2px 2px 10px black;
+}
+
+.image img{
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    width: 100%;
+}
+
+.title{
+    text-align: center;
+    padding: 5px;   
+}
+.des{
+    text-align: center;
+    padding: 4px;
+}
+
+button{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: white;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: black;
+    color: white;
+    transition: .5s;
+}
