@@ -15,7 +15,7 @@ router.post('/home', (req, res) => {
 			return res.redirect('/');
 		}
 		else{
-			return res.sendFile('/home/sparcs/SPARCS_NewbieProject/login_page/static/views/home.html');
+			return res.sendFile('/home/sparcs/SPARCS_NewbieProject/login_page/static/views/card.html');
 		}
 	 });
 	 /*
