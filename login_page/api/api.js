@@ -3,9 +3,9 @@ const User = require('../models/user');
 
 const router = express.Router();
 
-router.post('/sign_in', (req, res) => {
+router.post('/home', (req, res) => {
 	 console.log(req.body);
-	 User.findOne({id: req.body.id, pw: req.body.pw}, (err, user) => {
+	 User.findOne({id: req.body.id, pw: req.body.password}, (err, user) => {
 	 	if(err){
 	 		console.log(err);
 			return res.redirect('/');
@@ -15,7 +15,7 @@ router.post('/sign_in', (req, res) => {
 			return res.redirect('/');
 		}
 		else{
-			return res.sendFile(__dirname + 'blabla');
+			return res.sendFile('/home/sparcs/SPARCS_NewbieProject/login_page/static/views/home.html');
 		}
 	 });
 	 /*
