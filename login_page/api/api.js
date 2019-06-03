@@ -72,6 +72,7 @@ router.post('/load', (req, res) => {
 	const text = new Text();
 	text.suggest = req.body.check1;
 	text.notice = req.body.check2;
+	text.dormitory = req.body.dormitory;
 	text.title = req.body.title;
 	text.text = req.body.text;
 	text.date = req.body.date;

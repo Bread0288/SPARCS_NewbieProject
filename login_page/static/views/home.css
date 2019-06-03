@@ -50,8 +50,8 @@ body{
 }
 
 .a{
-    height: 300px;
-    margin-bottom: 60px;
+    margin-top: 10px;
+    height: 400px;
 }
 
 .suggestions{
@@ -88,7 +88,7 @@ table.suggestions tbody tr th td{
 }
 
 .write{
-    height: 430px;
+    height: 500px;
     margin-bottom: 10px;
 }
 
@@ -96,6 +96,10 @@ table.suggestions tbody tr th td{
     height: 50px;
     margin-right: 30px;
     display: inline-block;
+}
+
+.selectDor{
+    margin-bottom: 7px;
 }
 
 .write input[type="radio"]{

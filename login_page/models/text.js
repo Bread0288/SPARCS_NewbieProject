@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 const textSchema = new Schema({
 	suggest : Boolean,
 	notice : Boolean,
+	dormitory : String,
 	title : String,
 	text: String,
 	date: String

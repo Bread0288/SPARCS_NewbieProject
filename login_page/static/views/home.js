@@ -5,7 +5,7 @@ axios.get('/api/suggestload')
     let i = 0;
   console.log(res.data);
   res.data.reverse().forEach((e) => {
-      if(i < 6){
+      if(i < 5){
         addElementSuggestions(e.title, e.date);
         i++;
       }
@@ -50,9 +50,11 @@ function submitText(){
     console.log(today);
     const suggest_check = document.getElementById('suggest').checked;
     const notice_check = document.getElementById('notice').checked;
+    const dormitory = document.getElementById('selectDor').value;
     const title = document.getElementById('title').value;
     const context = document.getElementById('context').value;
-    axios.post('/api/load', { check1: suggest_check, check2: notice_check, title: title, text:context, date:today }).then((res) => {
+    console.log(dormitory);
+    axios.post('/api/load', { check1: suggest_check, check2: notice_check, dormitory: dormitory, title: title, text:context, date:today }).then((res) => {
         console.log(res);
         if(suggest_check == true){
             alert("건의사항에 글쓰기가 완료되었습니다");

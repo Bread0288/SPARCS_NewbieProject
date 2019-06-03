@@ -10,28 +10,29 @@
 	<body>
 		
 		<div class="head">
-			<h3>Head</h3>
+			<h3>SPARCS</h3>
 			<h5 onclick="location.href='logout'">로그아웃</h5>
 		</div>
 
 		<div class="total">
 		<div class="content">
 			<div class="right-part">
-				<div class="a">
-				<table class="table table-striped suggestions">
-					<thead>
-						<tr>
-							<th style="width: 80%; text-align: left; font-size: 15px">건의사항</th>
-							<th onclick="location.href='suggestions'" style="width: 20%; text-align: right">+Detail</th>
-						</tr>
-					</thead>
-					<tbody id="sugBody">
+				<div class="a card-body">
+					<h3>Board</h3>
+					<table class="table table-striped suggestions">
+						<thead>
+							<tr>
+								<th style="width: 80%; text-align: left; font-size: 15px">건의사항</th>
+								<th onclick="location.href='suggestions'" style="width: 20%; text-align: right">+Detail</th>
+							</tr>
+						</thead>
+						<tbody id="sugBody">
 
-					</tbody>
-				</table>
+						</tbody>
+					</table>
 				</div>
 
-				<div class="b">
+				<div class="b card-body">
 				<table class="table table-striped notice">
 					<div >
 					<thead>
@@ -47,10 +48,12 @@
 				</div>
 			</div>
 
-			<div class=" card left-part">
+			<div class="left-part">
+				<div class="card-body">
+						<h3>작성</h3>
 				<div class="write card">
 					<div class="card-body">
-						<h5>구분</h5><br>
+						<h5>카테고리</h5><br>
 						<div class="check">
 							건의사항<input type="radio" id="suggest" name="btn" class="form-control" value="건의사항" ondblclick="this.checked=false">
 						</div>
@@ -58,20 +61,28 @@
 							공지사항<input type="radio" id="notice" name="btn" class="form-control" value="공지사항" ondblclick="this.checked=false">
 						</div>
 						<br>
+						<h5>기숙사</h5><br>
+						<div class="selectDor">
+							<select id="selectDor" class="form-control" name="dormitory">
+								<option value="진리관">진리관</option>
+								<option value="아름관">아름관</option>
+								<option value="세종관">세종관</option>
+							</select>
+						</div>
 						<h5>제목</h5>
-						<input type="text" id="title" class="form-control" name="제목">
+						<input type="text" id="title" class="form-control" name="제목" placeholder="간단하게 15자 이내">
 						<h5>내용</h5>
 						<textarea id="context" class="form-control" name="내용" cols="40" rows="3" style="height: 150px"></textarea>
 						
 						<button class="btn btn-primary" onclick="submitText()">Submit</button>
 					</div>
 				</div>
+				</div>
 			</div>
 		</div>
 		</div>
 
 		<div class="bottom">
-			<h3>Bottom</h3>
 		</div>
 		<script type="text/javascript" src="home.js"></script>
 	</body>
