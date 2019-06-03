@@ -21,7 +21,7 @@ axios.get('/api/noticeload')
     let i = 0;
   console.log(res.data);
   res.data.reverse().forEach((e) => {
-    if(i < 4){
+    if(i < 2){
         addElementNotice(e.title, e.date);
         i++;
       }
