@@ -13,16 +13,21 @@ axios.get('/api/noticeload')
 
 function addElement(title, content){
     const newdiv = document.createElement('div');
-    newdiv.className = 'cards';
+    newdiv.className = 'card cards';
     newdiv.innerHTML=`
-    <div class="title">
-        <h1>${title}</h1>
-    </div>
-    <div class="des">
-        <p class="card">${content}</p>
-    </div>
-    <div class="button">
-        <button>Read More...</button>
+    <div class="card-body">
+        <div class="title">
+            <h3 class="title1">${title}</h3>
+        </div>
+        <div class="des">
+            <div class="card inner">
+                
+                <p style="margin-left: 7px">${content}</p>
+            </div>
+        </div>
+        <div class="button">
+            <button>Read More...</button>
+        </div>
     </div>
     `;
     document.getElementById('main').appendChild(newdiv);

@@ -17,7 +17,7 @@ function addElement(title, content){
     newdiv.innerHTML=`
     <div class="card-body">
         <div class="title">
-            <h3>${title}</h3>
+            <h3 class="title1">${title}</h3>
         </div>
         <div class="des">
             <div class="card inner">
