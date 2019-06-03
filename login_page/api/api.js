@@ -11,11 +11,11 @@ router.post('/login', (req, res) => {
             console.log(err);
            return res.redirect('/');
         }
-       else if(user === null){
+		else if(user === null){
            console.log('ID and PW are not matched');
            return res.redirect('/');
-       }
-       else{
+		}
+		else{
 		   req.session.user = user;
            return res.redirect('/home');
        }
@@ -43,14 +43,14 @@ router.post('/sign_up', (req, res) => {
                 return res.sendFile('/');
             }
 			console.log('good database created');
-            return res.sendFile('/Users/iulke/Desktop/SPARCS_NewbieProject/login_page/static/views/close_windows.html');
+            return res.redirect('/windowClose');
         })
 	}
 })
 
-router.get('/lostandfound', (req, res) => {
-	res.send('/Users/iulke/Desktop/SPARCS_NewbieProject/login_page/static/views/card.html');
-})
+// router.get('/lostandfound', (req, res) => {
+// 	res.send('/Users/iulke/Desktop/SPARCS_NewbieProject/login_page/static/views/card.html');
+// })
 
 router.get('/suggestload', (req, res) => {
 	console.log("GET suggestload is started");
