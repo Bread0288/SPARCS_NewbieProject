@@ -30,6 +30,17 @@ function addElement(title, content, dormitory){
     document.getElementById('main').appendChild(newdiv);
 }
 
+function listText() {
+    const list = document.getElementsByClassName('cards');
+    // list[0].childNodes[1].add("hide")
+    console.log(list);
+    for(let i=0; i<list.length; i++){
+        if(document.getElementById('selectDor').value != list[i].childNodes[1].childNodes[3].innerHTML){
+            list[i].className += " " + "hide";
+        }
+    }
+}
+
 function showDetails(){
     window.open("detail.html", "details", "width=600, height=500, left=100, top=50");
 }

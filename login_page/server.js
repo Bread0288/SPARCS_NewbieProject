@@ -28,7 +28,6 @@ app.get('/', (req, res) => {
     if(req.session.user) {
         res.redirect('/home');
     }
-    res.sendFile(__dirname + '/static/views/main.html');
 });
 
 app.get('/passwordFail', (req, res) => {

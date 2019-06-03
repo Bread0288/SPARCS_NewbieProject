@@ -22,15 +22,16 @@ body{
 
 .head h5 {
     font-size: 12px;
-    margin-left: 45px;
+    margin-left: 87%;
 }
 
 .total{
     width: 100%;
+    margin-top: 30px;
 }
 
-h1{
-	 text-size: 2.0rem;
+.title_a{
+    border-bottom: thick double #666666;
 }
 
 .main{
@@ -51,7 +52,11 @@ h1{
 	 font-size: 1.25rem;
 }
 .top{
-    height: 7px;
+}
+
+.hide {
+    display: none !important;
+    border : none;
 }
 
 .title1{

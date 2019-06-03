@@ -12,7 +12,13 @@
         <h5 onclick="location.href='logout'">로그아웃</h5>
     </div>
     <div class="total">
-        <h1>공지사항</h1>
+        <h3 class="title_a">공지사항</h3>
+        <select id="selectDor" onchange="listText()" class="form-control" name="dormitory" style="width: 150px; margin-left: 88%">
+            <option value="">기숙사 선택</option>
+            <option value="진리관">진리관</option>
+            <option value="아름관">아름관</option>
+            <option value="세종관">세종관</option>
+        </select>
         <div id="main" class="main">
             
         </div>
