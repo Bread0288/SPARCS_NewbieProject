@@ -1,7 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Sign Up</title>
+
+    <link rel="stylesheet" type="text/css" href="./sign_up.css">
 </head>
 <body>
+    <div id="login-box">
+        <div class="left-box">
+            <form class="box" id="form" action="/api/sign_up" method="POST">
+                <h1>Sign Up</h1>
+                <input type="text" name="username" placeholder="Username"/>
+                <input type="text" name="dormitory" placeholder="Dormitory"/>
+                <input type="password" name="password" placeholder="Password"/>
+                <input type="password" name="password2" placeholder="Retypepassword"/>
+                <input type="submit" name="signup-button" value="Sign Up"/>
+            </form>
+        </div>
+        <div class="right-box">
+            <span class="signinwith">Sign in with<br/>Social Network</span>
+            <button class="social facebook">Log in with Facebook</button>
+            <button class="social twitter">Log in with Twitter</button>
+            <button class="social google">Log in with Google+</button>
+        </div>
+        <div class="or">OR</div>
+    </div>
+    <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
