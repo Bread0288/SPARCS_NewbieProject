@@ -31,6 +31,14 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/static/views/main.html');
 });
 
+app.get('/passwordFail', (req, res) => {
+    res.sendFile(__dirname + '/static/views/password_fail.html');
+})
+
+app.get('/windowClose', (req, res) => {
+    return res.sendFile(__dirname + '/static/views/close_windows.html');
+})
+
 app.use((req, res, next) => {
     if(req.session.user) {
         next();

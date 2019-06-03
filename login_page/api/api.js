@@ -30,7 +30,7 @@ router.post('/sign_up', (req, res) => {
 	const password2 = req.body.password2;
 	
     if(password !== password2){
-        return res.sendFile('/Users/iulke/Desktop/SPARCS_NewbieProject/login_page/static/views/password_fail.html');
+        return res.redirect('/passwordFail');
     }else{
         const newuser = new User();
         newuser.id = name;
